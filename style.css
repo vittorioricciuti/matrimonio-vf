@@ -5,6 +5,8 @@
   --accent:#A08779;
   --line:rgba(34,31,29,.12);
   --shadow:0 16px 40px rgba(34,31,29,.10);
+
+  /* Foto hero (tramonto) */
   --hero-photo: url("assets/hero.jpg");
 }
 
@@ -37,9 +39,22 @@ a{ color:inherit; text-decoration:none; }
   justify-content:space-between;
   gap:14px;
 }
-.brand{ display:flex; align-items:center; gap:10px; min-width:210px; }
-.brand-mark{ width:34px; height:auto; opacity:.95; }
-.brand-text{ font-weight:600; color:var(--accent); letter-spacing:.2px; }
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:210px;
+}
+.brand-mark{
+  width:34px;
+  height:auto;
+  opacity:.95;
+}
+.brand-text{
+  font-weight:600;
+  color:var(--accent);
+  letter-spacing:.2px;
+}
 
 .menu{
   display:flex;
@@ -55,10 +70,13 @@ a{ color:inherit; text-decoration:none; }
   padding:8px 0;
   border-bottom:1px solid transparent;
 }
-.menu a:hover{ border-bottom-color:rgba(160,135,121,.5); }
+.menu a:hover{
+  border-bottom-color:rgba(160,135,121,.5);
+}
 
 .pages{ min-height:calc(100vh - 74px); }
 
+/* Pagine (effetto “pagine diverse” via hash) */
 .page{ display:none; animation:fade .22s ease; }
 .page.is-active{ display:block; }
 @keyframes fade{
@@ -66,6 +84,7 @@ a{ color:inherit; text-decoration:none; }
   to{ opacity:1; transform:translateY(0); }
 }
 
+/* HERO */
 .hero{
   min-height:calc(100vh - 74px);
   display:grid;
@@ -76,7 +95,8 @@ a{ color:inherit; text-decoration:none; }
   background-position:center;
 }
 .hero-overlay{
-  position:absolute; inset:0;
+  position:absolute;
+  inset:0;
   background:linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.86));
 }
 .hero-content{
@@ -93,7 +113,11 @@ a{ color:inherit; text-decoration:none; }
   margin:0;
   color:var(--accent);
 }
-.subtitle{ margin:10px 0 0; color:var(--muted); font-size:18px; }
+.subtitle{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-size:18px;
+}
 
 .datebox{
   margin:18px auto 0;
@@ -104,8 +128,16 @@ a{ color:inherit; text-decoration:none; }
   background:rgba(255,255,255,.75);
   box-shadow:var(--shadow);
 }
-.date{ font-size:30px; letter-spacing:.6px; color:var(--accent); }
-.time{ margin-top:6px; color:var(--muted); font-size:16px; }
+.date{
+  font-size:30px;
+  letter-spacing:.6px;
+  color:var(--accent);
+}
+.time{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:16px;
+}
 
 .cta-row{
   margin-top:18px;
@@ -127,8 +159,15 @@ a{ color:inherit; text-decoration:none; }
   cursor:pointer;
   transition:transform .08s ease, border-color .2s ease, background .2s ease;
 }
-.btn:hover{ transform:translateY(-1px); border-color:rgba(160,135,121,.75); }
-.btn.primary{ background:var(--accent); color:#fff; border-color:transparent; }
+.btn:hover{
+  transform:translateY(-1px);
+  border-color:rgba(160,135,121,.75);
+}
+.btn.primary{
+  background:var(--accent);
+  color:#fff;
+  border-color:transparent;
+}
 
 .countdown{
   margin:18px auto 0;
@@ -145,10 +184,22 @@ a{ color:inherit; text-decoration:none; }
   box-shadow:0 10px 26px rgba(34,31,29,.08);
   padding:10px 10px 8px;
 }
-.cd-num{ font-size:26px; font-weight:600; color:var(--accent); }
-.cd-lab{ margin-top:4px; font-size:13px; color:var(--muted); }
+.cd-num{
+  font-size:26px;
+  font-weight:600;
+  color:var(--accent);
+}
+.cd-lab{
+  margin-top:4px;
+  font-size:13px;
+  color:var(--muted);
+}
 
-.photo-strip{ margin:26px auto 0; display:flex; justify-content:center; }
+.photo-strip{
+  margin:26px auto 0;
+  display:flex;
+  justify-content:center;
+}
 .photo-card{
   width:min(520px, 92vw);
   border:1px solid var(--line);
@@ -164,8 +215,12 @@ a{ color:inherit; text-decoration:none; }
   object-fit:cover;
   display:block;
 }
-.photo-cap{ padding:12px 14px; color:var(--muted); }
+.photo-cap{
+  padding:12px 14px;
+  color:var(--muted);
+}
 
+/* Pagine interne */
 .page-head{
   max-width:900px;
   margin:0 auto;
@@ -179,8 +234,16 @@ a{ color:inherit; text-decoration:none; }
   color:var(--accent);
   margin:0;
 }
-.page-head p{ margin:10px 0 0; color:var(--muted); font-size:18px; }
-.content{ max-width:900px; margin:0 auto; padding:18px 16px 48px; }
+.page-head p{
+  margin:10px 0 0;
+  color:var(--muted);
+  font-size:18px;
+}
+.content{
+  max-width:900px;
+  margin:0 auto;
+  padding:18px 16px 48px;
+}
 
 .card{
   border:1px solid var(--line);
@@ -189,11 +252,19 @@ a{ color:inherit; text-decoration:none; }
   background:linear-gradient(180deg, rgba(160,135,121,.08), rgba(160,135,121,.03));
   box-shadow:var(--shadow);
 }
-.card h3{ margin:6px 0 6px; font-size:22px; }
+.card h3{
+  margin:6px 0 6px;
+  font-size:22px;
+}
 .muted{ color:var(--muted); }
-.tiny{ font-size:13px; }
 
-.btnrow{ margin-top:14px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap; }
+.btnrow{
+  margin-top:14px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
 
 .note{
   margin-top:16px;
@@ -203,8 +274,25 @@ a{ color:inherit; text-decoration:none; }
   background:#fff;
   box-shadow:0 12px 28px rgba(34,31,29,.07);
 }
-.note h4{ margin:0 0 8px; color:var(--accent); font-size:18px; }
+.note h4{
+  margin:0 0 8px;
+  color:var(--accent);
+  font-size:18px;
+}
 
+/* Foto sezione (cerimonia / ricevimento) */
+.section-photo{
+  width:100%;
+  height:260px;
+  object-fit:contain;        /* per i disegni va meglio di cover */
+  background:rgba(255,255,255,.85);
+  border:1px solid var(--line);
+  border-radius:18px;
+  margin-top:14px;
+  padding:10px;
+}
+
+/* IBAN */
 .iban-box{
   margin-top:14px;
   border:1px dashed rgba(160,135,121,.55);
@@ -222,7 +310,14 @@ a{ color:inherit; text-decoration:none; }
 .iban-line:first-child{ border-top:none; }
 .iban-label{ color:var(--muted); font-size:14px; }
 .iban-value{ font-weight:600; word-break:break-all; }
-.toast{ margin-top:10px; min-height:18px; text-align:center; color:var(--accent); font-weight:600; }
+
+.toast{
+  margin-top:10px;
+  min-height:18px;
+  text-align:center;
+  color:var(--accent);
+  font-weight:600;
+}
 
 .footer{
   border-top:1px solid var(--line);
@@ -231,6 +326,7 @@ a{ color:inherit; text-decoration:none; }
   color:rgba(34,31,29,.55);
 }
 
+/* Responsive */
 @media (max-width:720px){
   .topbar-inner{ flex-direction:column; }
   .brand{ min-width:0; }
@@ -240,4 +336,5 @@ a{ color:inherit; text-decoration:none; }
   .date{ font-size:26px; }
   .photo-card img{ height:220px; }
   .iban-line{ grid-template-columns:1fr; }
+  .section-photo{ height:220px; }
 }
