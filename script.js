@@ -1,4 +1,4 @@
-// Navigazione “a pagine” via hash (#home, #cerimonia, ...)
+// Navigazione “a pagine” via hash
 const pages = [...document.querySelectorAll('.page')];
 
 function showPage(hash){
@@ -6,10 +6,11 @@ function showPage(hash){
   pages.forEach(p => p.classList.toggle('is-active', p.dataset.page === target));
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
+
 window.addEventListener('hashchange', () => showPage(location.hash));
 showPage(location.hash);
 
-// Countdown (18/07/2026 ore 16:00 - Italia)
+// Countdown al matrimonio (18/07/2026 ore 16:00 - Italia)
 const weddingDate = new Date('2026-07-18T16:00:00+02:00');
 const dEl = document.getElementById('cd-days');
 const hEl = document.getElementById('cd-hours');
@@ -28,6 +29,7 @@ function tick(){
   if(hEl) hEl.textContent = String(hours).padStart(2,'0');
   if(mEl) mEl.textContent = String(mins).padStart(2,'0');
 }
+
 tick();
 setInterval(tick, 30_000);
 
