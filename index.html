@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vittorio & Federica — 18 luglio 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#home" aria-label="Home">
+        <img class="brand-mark" src="assets/logo.png" alt="Monogramma VF"
+             onerror="this.style.display='none'">
+        <span class="brand-text">Vittorio & Federica</span>
+      </a>
+
+      <nav class="menu" aria-label="Menu">
+        <a href="#cerimonia">Cerimonia</a>
+        <a href="#ricevimento">Ricevimento</a>
+        <a href="#rsvp">RSVP</a>
+        <a href="#viaggio">Viaggio di nozze</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pages">
+
+    <!-- HOME -->
+    <section class="page is-active" id="home" data-page="home">
+      <div class="hero">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <h1 class="names">Vittorio & Federica</h1>
+          <p class="subtitle">sono felici di annunciare il loro matrimonio</p>
+
+          <div class="datebox">
+            <div class="date">18 luglio 2026</div>
+            <div class="time">ore 16:00</div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#rsvp">Conferma presenza</a>
+            <a class="btn" href="#cerimonia">Dettagli</a>
+          </div>
+
+          <div class="countdown" aria-label="Countdown">
+            <div class="cd-item"><div class="cd-num" id="cd-days">–</div><div class="cd-lab">giorni</div></div>
+            <div class="cd-item"><div class="cd-num" id="cd-hours">–</div><div class="cd-lab">ore</div></div>
+            <div class="cd-item"><div class="cd-num" id="cd-mins">–</div><div class="cd-lab">min</div></div>
+          </div>
+
+          <div class="photo-strip">
+            <div class="photo-card">
+              <img src="assets/gallery.jpg" alt="Vittorio e Federica" />
+              <div class="photo-cap">Non vediamo l’ora di festeggiare insieme ✨</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERIMONIA -->
+    <section class="page" id="cerimonia" data-page="cerimonia">
+      <div class="page-head">
+        <h2>Cerimonia</h2>
+        <p>Chiesa San Giovanni Battista — Grottammare (AP)</p>
+      </div>
+
+      <div class="content">
+        <div class="card">
+          <h3>Chiesa San Giovanni Battista</h3>
+          <p class="muted">Grottammare (AP)</p>
+
+          <div class="btnrow">
+            <a class="btn" target="_blank"
+               href="https://maps.google.com/?q=Chiesa%20San%20Giovanni%20Battista%20Grottammare">
+              Apri su Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="note">
+          <h4>Come arrivare</h4>
+          <p class="muted">
+            Consigliamo di arrivare con qualche minuto di anticipo.
+            Per il percorso più rapido, usate il pulsante “Apri su Google Maps”.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RICEVIMENTO -->
+    <section class="page" id="ricevimento" data-page="ricevimento">
+      <div class="page-head">
+        <h2>Ricevimento</h2>
+        <p>Villa Boccabianca — Cupra Marittima (AP)</p>
+      </div>
+
+      <div class="content">
+        <div class="card">
+          <h3>Villa Boccabianca</h3>
+          <p class="muted">Cupra Marittima (AP)</p>
+
+          <div class="btnrow">
+            <a class="btn" target="_blank"
+               href="https://maps.google.com/?q=Villa%20Boccabianca%20Cupra%20Marittima">
+              Apri su Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="note">
+          <h4>Come arrivare</h4>
+          <p class="muted">
+            Dopo la cerimonia i festeggiamenti continueranno presso Villa Boccabianca,
+            a pochi minuti dalla chiesa. Potrete seguire le indicazioni di Google Maps.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="page" id="rsvp" data-page="rsvp">
+      <div class="page-head">
+        <h2>RSVP</h2>
+        <p>È gradita conferma entro il <strong>1 giugno 2026</strong></p>
+      </div>
+
+      <div class="content">
+        <div class="card">
+          <h3>Conferma presenza</h3>
+          <p class="muted">Clicca sul pulsante qui sotto per compilare il modulo.</p>
+
+          <div class="btnrow">
+            <a class="btn primary" target="_blank"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSd4NHM09cKIY8TEshPcz9P5LmB0gFok3LODorbH5M8iAPPXmQ/viewform?usp=header">
+              Apri il modulo RSVP
+            </a>
+          </div>
+
+          <p class="tiny muted">(Si apre in una nuova scheda)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIAGGIO -->
+    <section class="page" id="viaggio" data-page="viaggio">
+      <div class="page-head">
+        <h2>Viaggio di nozze</h2>
+        <p>Un pensiero, se lo desiderate</p>
+      </div>
+
+      <div class="content">
+        <div class="card">
+          <p>
+            Il regalo più grande è la vostra presenza nel giorno più importante della nostra vita.<br>
+            Per chi desidera farci un pensiero, potete contribuire al nostro viaggio di nozze.
+          </p>
+
+          <div class="iban-box">
+            <div class="iban-line">
+              <div class="iban-label">Intestatario</div>
+              <div class="iban-value">Di Ridolfi Federica e Ricciuti Vittorio</div>
+            </div>
+
+            <div class="iban-line">
+              <div class="iban-label">IBAN</div>
+              <div class="iban-value" id="ibanText">IT20N0538769670000003677231</div>
+            </div>
+
+            <div class="btnrow">
+              <button class="btn" id="copyIban" type="button">Copia IBAN</button>
+            </div>
+
+            <div class="toast" id="toast" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div>Vittorio & Federica — 18 luglio 2026</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
