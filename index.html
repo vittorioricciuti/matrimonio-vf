@@ -4,9 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vittorio & Federica — 18 luglio 2026</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -14,8 +16,7 @@
   <header class="topbar">
     <div class="topbar-inner">
       <a class="brand" href="#home" aria-label="Home">
-        <img class="brand-mark" src="assets/logo.png" alt="Monogramma VF"
-             onerror="this.style.display='none'">
+        <img class="brand-mark" src="assets/logo.png" alt="Monogramma VF" onerror="this.style.display='none'">
         <span class="brand-text">Vittorio & Federica</span>
       </a>
 
@@ -37,7 +38,7 @@
 
         <div class="hero-content">
           <h1 class="names">Vittorio & Federica</h1>
-          <p class="subtitle">sono felici di annunciare il loro matrimonio</p>
+          <p class="subtitle">Sono felici di annunciare il loro matrimonio</p>
 
           <div class="datebox">
             <div class="date">18 luglio 2026</div>
@@ -50,17 +51,27 @@
           </div>
 
           <div class="countdown" aria-label="Countdown">
-            <div class="cd-item"><div class="cd-num" id="cd-days">–</div><div class="cd-lab">giorni</div></div>
-            <div class="cd-item"><div class="cd-num" id="cd-hours">–</div><div class="cd-lab">ore</div></div>
-            <div class="cd-item"><div class="cd-num" id="cd-mins">–</div><div class="cd-lab">min</div></div>
+            <div class="cd-item">
+              <div class="cd-num" id="cd-days">–</div>
+              <div class="cd-lab">giorni</div>
+            </div>
+            <div class="cd-item">
+              <div class="cd-num" id="cd-hours">–</div>
+              <div class="cd-lab">ore</div>
+            </div>
+            <div class="cd-item">
+              <div class="cd-num" id="cd-mins">–</div>
+              <div class="cd-lab">minuti</div>
+            </div>
           </div>
 
           <div class="photo-strip">
             <div class="photo-card">
-              <img src="assets/gallery.jpg" alt="Vittorio e Federica" />
-              <div class="photo-cap">Non vediamo l’ora di festeggiare insieme ✨</div>
+              <img src="assets/gallery.jpg" alt="Vittorio e Federica" onerror="this.style.display='none'">
+              <div class="photo-cap">Non vediamo l’ora di festeggiare insieme a voi</div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -77,6 +88,9 @@
           <h3>Chiesa San Giovanni Battista</h3>
           <p class="muted">Grottammare (AP)</p>
 
+          <!-- FOTO / DISEGNO CERIMONIA -->
+          <img class="section-photo" src="assets/cerimonia.png" alt="Chiesa San Giovanni Battista" onerror="this.style.display='none'">
+
           <div class="btnrow">
             <a class="btn" target="_blank"
                href="https://maps.google.com/?q=Chiesa%20San%20Giovanni%20Battista%20Grottammare">
@@ -88,8 +102,8 @@
         <div class="note">
           <h4>Come arrivare</h4>
           <p class="muted">
-            Consigliamo di arrivare con qualche minuto di anticipo.
-            Per il percorso più rapido, usate il pulsante “Apri su Google Maps”.
+            Uscire al casello di Grottammare, svoltare a destra su SP92/SS16 verso Sud, seguire le indicazioni per
+            “Grottammare Alta” o “Paese Alto”, per la strada panoramica (Via Ischia I) fino al centro storico.
           </p>
         </div>
       </div>
@@ -107,6 +121,9 @@
           <h3>Villa Boccabianca</h3>
           <p class="muted">Cupra Marittima (AP)</p>
 
+          <!-- FOTO / DISEGNO RICEVIMENTO -->
+          <img class="section-photo" src="assets/ricevimento.png" alt="Villa Boccabianca" onerror="this.style.display='none'">
+
           <div class="btnrow">
             <a class="btn" target="_blank"
                href="https://maps.google.com/?q=Villa%20Boccabianca%20Cupra%20Marittima">
@@ -118,8 +135,12 @@
         <div class="note">
           <h4>Come arrivare</h4>
           <p class="muted">
-            Dopo la cerimonia i festeggiamenti continueranno presso Villa Boccabianca,
-            a pochi minuti dalla chiesa. Potrete seguire le indicazioni di Google Maps.
+            Dopo la cerimonia i festeggiamenti proseguiranno presso Villa Boccabianca.
+            Dalla Chiesa, uscire da Piazza Peretti (Grottammare Alta) e scendere verso la costa imboccando la SS16
+            Adriatica in direzione nord (Cupra Marittima/Ancona). Proseguire sulla SS16 per circa 4-5 km, superato
+            il centro abitato di Cupra Marittima, seguire le indicazioni per Contrada Bocca Bianca, 28.
+            La villa si trova in una posizione panoramica sopraelevata rispetto alla statale; l’ingresso è segnalato
+            e dispone di un ampio parcheggio interno.
           </p>
         </div>
       </div>
@@ -140,11 +161,9 @@
           <div class="btnrow">
             <a class="btn primary" target="_blank"
                href="https://docs.google.com/forms/d/e/1FAIpQLSd4NHM09cKIY8TEshPcz9P5LmB0gFok3LODorbH5M8iAPPXmQ/viewform?usp=header">
-              Apri il modulo RSVP
+              Rispondi qui
             </a>
           </div>
-
-          <p class="tiny muted">(Si apre in una nuova scheda)</p>
         </div>
       </div>
     </section>
@@ -153,14 +172,14 @@
     <section class="page" id="viaggio" data-page="viaggio">
       <div class="page-head">
         <h2>Viaggio di nozze</h2>
-        <p>Un pensiero, se lo desiderate</p>
       </div>
 
       <div class="content">
         <div class="card">
           <p>
-            Il regalo più grande è la vostra presenza nel giorno più importante della nostra vita.<br>
-            Per chi desidera farci un pensiero, potete contribuire al nostro viaggio di nozze.
+            Il dono più grande è la vostra presenza nel giorno più importante della nostra vita.
+            Se desiderate potete contribuire al nostro viaggio di nozze a questo indirizzo.
+            Vi preghiamo di includere Nome e Cognome nella causale.
           </p>
 
           <div class="iban-box">
