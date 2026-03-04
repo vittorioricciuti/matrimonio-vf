@@ -201,6 +201,14 @@ a{
   border-color:transparent;
 }
 
+/* NUOVO: pulsante piccolo (usato per Copia IBAN) */
+
+.btn.btn-small{
+  padding:8px 14px;
+  min-height:36px;
+  font-size:15px;
+}
+
 /* COUNTDOWN */
 
 .countdown{
@@ -331,7 +339,7 @@ a{
   font-size:18px;
 }
 
-/* FOTO CERIMONIA E RICEVIMENTO (FIX MOBILE) */
+/* FOTO CERIMONIA / RICEVIMENTO */
 
 .section-photo{
   width:100%;
