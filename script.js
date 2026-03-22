@@ -164,10 +164,10 @@ const translations = {
     countMinutes: "minutes",
 
     programTitle: "Schedule",
-    programCeremonyTime: "4:00 PM",
+    programCeremonyTime: "4:00<br>PM",
     programCeremonyLabel: "Ceremony",
     programCeremonyDetail: "Church of San Giovanni Battista — Grottammare",
-    programReceptionTime: "6:30 PM",
+    programReceptionTime: "6:30<br>PM",
     programReceptionLabel: "Reception",
     programReceptionDetail: "Villa Boccabianca — Cupra Marittima",
     programNote: "Dinner and party to follow at Villa Boccabianca",
@@ -229,12 +229,16 @@ function applyLanguage(lang){
     }
   });
 
-  document.querySelectorAll('[data-i18n-html]').forEach(el => {
-    const key = el.dataset.i18nHtml;
-    if (translations[lang][key]) {
-      el.innerHTML = translations[lang][key];
-    }
-  });
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+  const key = el.dataset.i18n;
+  if (!translations[lang][key]) return;
+
+  if (key === 'programCeremonyTime' || key === 'programReceptionTime') {
+    el.innerHTML = translations[lang][key];
+  } else {
+    el.textContent = translations[lang][key];
+  }
+});
 
   document.getElementById('lang-it')?.classList.toggle('active', lang === 'it');
   document.getElementById('lang-en')?.classList.toggle('active', lang === 'en');
