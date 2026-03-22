@@ -87,7 +87,7 @@ const translations = {
     homeTime: "ore 16:00",
     homeCtaRsvp: "Conferma presenza",
     homeCtaDetails: "Dettagli",
-    homePhotoCaption: "Non vediamo l’ora di festeggiare insieme a voi",
+    homePhotoCaption: "Non vediamo l’ora di festeggiare insieme a voi!",
 
     countDays: "giorni",
     countHours: "ore",
@@ -146,7 +146,7 @@ const translations = {
     homeTime: "4:00 PM",
     homeCtaRsvp: "RSVP",
     homeCtaDetails: "Details",
-    homePhotoCaption: "We can’t wait to celebrate with you",
+    homePhotoCaption: "We can’t wait to celebrate with you!",
 
     countDays: "days",
     countHours: "hours",
