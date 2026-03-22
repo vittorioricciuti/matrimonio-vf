@@ -141,7 +141,7 @@ const translations = {
     menuRicevimento: "Reception",
     menuViaggio: "Honeymoon",
 
-    homeSubtitle: "are delighted to announce their wedding",
+    homeSubtitle: "Are delighted to announce their wedding",
     homeDate: "July 18th 2026",
     homeTime: "4:00 PM",
     homeCtaRsvp: "RSVP",
