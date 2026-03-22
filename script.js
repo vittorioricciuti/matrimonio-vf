@@ -1,16 +1,40 @@
-// Navigazione “a pagine” via hash
 const pages = [...document.querySelectorAll('.page')];
+const pageIds = new Set(pages.map(p => p.dataset.page));
 
-function showPage(hash){
-  const target = (hash || '#home').replace('#','');
-  pages.forEach(p => p.classList.toggle('is-active', p.dataset.page === target));
-  window.scrollTo({ top: 0, behavior: 'instant' });
+function showPage(pageName){
+  pages.forEach(p => p.classList.toggle('is-active', p.dataset.page === pageName));
 }
 
-window.addEventListener('hashchange', () => showPage(location.hash));
-showPage(location.hash);
+function handleRoute(hash, options = { scroll: true }) {
+  const raw = (hash || '#home').replace('#', '');
 
-// Countdown al matrimonio (18/07/2026 ore 16:00 - Italia)
+  // ancora interna alla home
+  if (raw === 'programma') {
+    showPage('home');
+    if (options.scroll) {
+      setTimeout(() => {
+        document.getElementById('programma')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+    return;
+  }
+
+  // pagina normale
+  if (pageIds.has(raw)) {
+    showPage(raw);
+    if (options.scroll) window.scrollTo({ top: 0, behavior: 'instant' });
+    return;
+  }
+
+  // fallback
+  showPage('home');
+  if (options.scroll) window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+window.addEventListener('hashchange', () => handleRoute(location.hash));
+handleRoute(location.hash, { scroll: false });
+
+// Countdown
 const weddingDate = new Date('2026-07-18T16:00:00+02:00');
 const dEl = document.getElementById('cd-days');
 const hEl = document.getElementById('cd-hours');
@@ -29,9 +53,8 @@ function tick(){
   if(hEl) hEl.textContent = String(hours).padStart(2,'0');
   if(mEl) mEl.textContent = String(mins).padStart(2,'0');
 }
-
 tick();
-setInterval(tick, 30_000);
+setInterval(tick, 30000);
 
 // Copia IBAN
 const copyBtn = document.getElementById('copyIban');
@@ -177,13 +200,16 @@ function applyLanguage(lang){
   document.documentElement.lang = lang;
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (!translations[lang][key]) return;
-
-    if (key === 'rsvpDeadline') {
-      el.innerHTML = translations[lang][key];
-    } else {
+    const key = el.dataset.i18n;
+    if (translations[lang][key]) {
       el.textContent = translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.dataset.i18nHtml;
+    if (translations[lang][key]) {
+      el.innerHTML = translations[lang][key];
     }
   });
 
