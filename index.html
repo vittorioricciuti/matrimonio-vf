@@ -20,12 +20,20 @@
         <span class="brand-text">Vittorio & Federica</span>
       </a>
 
-      <nav class="menu" aria-label="Menu">
-        <a href="#cerimonia">Cerimonia</a>
-        <a href="#ricevimento">Ricevimento</a>
-        <a href="#rsvp">RSVP</a>
-        <a href="#viaggio">Viaggio di nozze</a>
-      </nav>
+      <div class="topbar-actions">
+        <nav class="menu" aria-label="Menu">
+          <a href="#cerimonia" data-i18n="menuCerimonia">Cerimonia</a>
+          <a href="#ricevimento" data-i18n="menuRicevimento">Ricevimento</a>
+          <a href="#rsvp">RSVP</a>
+          <a href="#viaggio" data-i18n="menuViaggio">Viaggio di nozze</a>
+        </nav>
+
+        <div class="lang-switch" aria-label="Language switcher">
+          <button class="lang-btn active" id="lang-it" type="button">IT</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" id="lang-en" type="button">EN</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -38,37 +46,61 @@
 
         <div class="hero-content">
           <h1 class="names">Vittorio & Federica</h1>
-          <p class="subtitle">Sono felici di annunciare il loro matrimonio</p>
+          <p class="subtitle" data-i18n="homeSubtitle">Sono felici di annunciare il loro matrimonio</p>
 
           <div class="datebox">
-            <div class="date">18 luglio 2026</div>
-            <div class="time">ore 16:00</div>
+            <div class="date" data-i18n="homeDate">18 luglio 2026</div>
+            <div class="time" data-i18n="homeTime">ore 16:00</div>
           </div>
 
           <div class="cta-row">
-            <a class="btn primary" href="#rsvp">Conferma presenza</a>
-            <a class="btn" href="#cerimonia">Dettagli</a>
+            <a class="btn primary" href="#rsvp" data-i18n="homeCtaRsvp">Conferma presenza</a>
+            <a class="btn" href="#cerimonia" data-i18n="homeCtaDetails">Dettagli</a>
           </div>
 
           <div class="countdown" aria-label="Countdown">
             <div class="cd-item">
               <div class="cd-num" id="cd-days">–</div>
-              <div class="cd-lab">giorni</div>
+              <div class="cd-lab" data-i18n="countDays">giorni</div>
             </div>
             <div class="cd-item">
               <div class="cd-num" id="cd-hours">–</div>
-              <div class="cd-lab">ore</div>
+              <div class="cd-lab" data-i18n="countHours">ore</div>
             </div>
             <div class="cd-item">
               <div class="cd-num" id="cd-mins">–</div>
-              <div class="cd-lab">minuti</div>
+              <div class="cd-lab" data-i18n="countMinutes">minuti</div>
             </div>
           </div>
 
           <div class="photo-strip">
             <div class="photo-card">
               <img src="assets/gallery.jpg" alt="Vittorio e Federica" onerror="this.style.display='none'">
-              <div class="photo-cap">Non vediamo l’ora di festeggiare insieme a voi</div>
+              <div class="photo-cap" data-i18n="homePhotoCaption">Non vediamo l’ora di festeggiare insieme a voi</div>
+            </div>
+          </div>
+
+          <div class="program-card">
+            <h2 data-i18n="programTitle">Programma</h2>
+
+            <div class="program-item">
+              <div class="program-time" data-i18n="programCeremonyTime">16:00</div>
+              <div class="program-copy">
+                <div class="program-label" data-i18n="programCeremonyLabel">Cerimonia</div>
+                <div class="program-detail" data-i18n="programCeremonyDetail">Chiesa San Giovanni Battista — Grottammare</div>
+              </div>
+            </div>
+
+            <div class="program-item">
+              <div class="program-time" data-i18n="programReceptionTime">18:30</div>
+              <div class="program-copy">
+                <div class="program-label" data-i18n="programReceptionLabel">Ricevimento</div>
+                <div class="program-detail" data-i18n="programReceptionDetail">Villa Boccabianca — Cupra Marittima</div>
+              </div>
+            </div>
+
+            <div class="program-note" data-i18n="programNote">
+              Cena e festa a seguire presso Villa Boccabianca
             </div>
           </div>
 
@@ -79,31 +111,46 @@
     <!-- CERIMONIA -->
     <section class="page" id="cerimonia" data-page="cerimonia">
       <div class="page-head">
-        <h2>Cerimonia</h2>
-        <p>Chiesa San Giovanni Battista — Grottammare (AP)</p>
+        <h2 data-i18n="ceremonyTitle">Cerimonia</h2>
+        <p data-i18n="ceremonyPlaceLine">Chiesa San Giovanni Battista — Grottammare (AP)</p>
+        <div class="title-ornament"></div>
       </div>
 
       <div class="content">
         <div class="card">
-          <h3>Chiesa San Giovanni Battista</h3>
-          <p class="muted">Grottammare (AP)</p>
+          <h3 data-i18n="ceremonyPlace">Chiesa San Giovanni Battista</h3>
+          <p class="muted" data-i18n="ceremonyCity">Grottammare (AP)</p>
 
           <img class="section-photo" src="assets/cerimonia.png" alt="Chiesa San Giovanni Battista" onerror="this.style.display='none'">
 
           <div class="btnrow">
             <a class="btn" target="_blank"
                href="https://maps.google.com/?q=Chiesa%20San%20Giovanni%20Battista%20Grottammare">
-              Apri su Google Maps
+              <span data-i18n="mapChurch">Apri la chiesa su Google Maps</span>
             </a>
           </div>
         </div>
 
         <div class="note">
-          <h4>Come arrivare</h4>
-          <p class="muted">
+          <h4 data-i18n="directionsTitle">Come arrivare</h4>
+          <p class="muted" data-i18n="ceremonyDirections">
             Uscire al casello di Grottammare, svoltare a destra su SP92/SS16 verso Sud, seguire le indicazioni per
             “Grottammare Alta” o “Paese Alto”, per la strada panoramica (Via Ischia I) fino al centro storico.
           </p>
+        </div>
+
+        <div class="note">
+          <h4 data-i18n="parkingTitle">Parcheggio</h4>
+          <p class="muted" data-i18n="ceremonyParking">
+            Parcheggio consigliato: Via Palmaroli, 35, 63066 Grottammare (AP)
+          </p>
+
+          <div class="btnrow">
+            <a class="btn" target="_blank"
+               href="https://maps.google.com/?q=Via%20Palmaroli%2035%2063066%20Grottammare%20AP">
+              <span data-i18n="mapParking">Apri il parcheggio su Google Maps</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -111,34 +158,40 @@
     <!-- RICEVIMENTO -->
     <section class="page" id="ricevimento" data-page="ricevimento">
       <div class="page-head">
-        <h2>Ricevimento</h2>
-        <p>Villa Boccabianca — Cupra Marittima (AP)</p>
+        <h2 data-i18n="receptionTitle">Ricevimento</h2>
+        <p data-i18n="receptionPlaceLine">Villa Boccabianca — Cupra Marittima (AP)</p>
+        <div class="title-ornament"></div>
       </div>
 
       <div class="content">
         <div class="card">
-          <h3>Villa Boccabianca</h3>
-          <p class="muted">Cupra Marittima (AP)</p>
+          <h3 data-i18n="receptionPlace">Villa Boccabianca</h3>
+          <p class="muted" data-i18n="receptionCity">Cupra Marittima (AP)</p>
 
           <img class="section-photo" src="assets/ricevimento.png" alt="Villa Boccabianca" onerror="this.style.display='none'">
 
           <div class="btnrow">
             <a class="btn" target="_blank"
                href="https://maps.google.com/?q=Villa%20Boccabianca%20Cupra%20Marittima">
-              Apri su Google Maps
+              <span data-i18n="mapVilla">Apri la villa su Google Maps</span>
             </a>
           </div>
         </div>
 
         <div class="note">
-          <h4>Come arrivare</h4>
-          <p class="muted">
+          <h4 data-i18n="directionsTitle">Come arrivare</h4>
+          <p class="muted" data-i18n="receptionDirections">
             Dopo la cerimonia i festeggiamenti proseguiranno presso Villa Boccabianca.
             Dalla Chiesa, uscire da Piazza Peretti (Grottammare Alta) e scendere verso la costa imboccando la SS16
             Adriatica in direzione nord (Cupra Marittima/Ancona). Proseguire sulla SS16 per circa 4-5 km, superato
             il centro abitato di Cupra Marittima, seguire le indicazioni per Contrada Bocca Bianca, 28.
-            La villa si trova in una posizione panoramica sopraelevata rispetto alla statale; l’ingresso è segnalato
-            e dispone di un ampio parcheggio interno.
+          </p>
+        </div>
+
+        <div class="note">
+          <h4 data-i18n="parkingTitle">Parcheggio</h4>
+          <p class="muted" data-i18n="receptionParking">
+            Parcheggio disponibile direttamente presso la villa
           </p>
         </div>
       </div>
@@ -148,18 +201,19 @@
     <section class="page" id="rsvp" data-page="rsvp">
       <div class="page-head">
         <h2>RSVP</h2>
-        <p>È gradita conferma entro il <strong>1 giugno 2026</strong></p>
+        <p data-i18n="rsvpDeadline">È gradita conferma entro il <strong>1 giugno 2026</strong></p>
+        <div class="title-ornament"></div>
       </div>
 
       <div class="content">
         <div class="card">
-          <h3>Conferma presenza</h3>
-          <p class="muted">Clicca sul pulsante qui sotto per compilare il modulo.</p>
+          <h3 data-i18n="rsvpTitle">Conferma presenza</h3>
+          <p class="muted" data-i18n="rsvpText">Clicca sul pulsante qui sotto per compilare il modulo.</p>
 
           <div class="btnrow">
             <a class="btn primary" target="_blank"
                href="https://docs.google.com/forms/d/e/1FAIpQLSd4NHM09cKIY8TEshPcz9P5LmB0gFok3LODorbH5M8iAPPXmQ/viewform?usp=header">
-              Rispondi qui
+              <span data-i18n="rsvpButton">Rispondi qui</span>
             </a>
           </div>
         </div>
@@ -169,19 +223,20 @@
     <!-- VIAGGIO -->
     <section class="page" id="viaggio" data-page="viaggio">
       <div class="page-head">
-        <h2>Viaggio di nozze</h2>
+        <h2 data-i18n="honeymoonTitle">Viaggio di nozze</h2>
+        <div class="title-ornament"></div>
       </div>
 
       <div class="content">
         <div class="card">
-          <p>
+          <p data-i18n="honeymoonText">
             Il regalo più prezioso sarà avervi con noi nel giorno più importante della nostra vita.
             Per chi lo desiderasse, è possibile contribuire al nostro viaggio di nozze seguendo le indicazioni riportate qui sotto.
           </p>
 
           <div class="iban-box">
             <div class="iban-line">
-              <div class="iban-label">Intestatario</div>
+              <div class="iban-label" data-i18n="ibanHolderLabel">Intestatario</div>
               <div class="iban-value">Di Ridolfi Federica e Ricciuti Vittorio</div>
             </div>
 
@@ -191,12 +246,12 @@
             </div>
 
             <div class="iban-line">
-              <div class="iban-label">Causale</div>
-              <div class="iban-value">Viaggio di nozze - vostro Nome e Cognome</div>
+              <div class="iban-label" data-i18n="ibanReasonLabel">Causale</div>
+              <div class="iban-value" data-i18n="ibanReasonValue">Viaggio di nozze - vostro Nome e Cognome</div>
             </div>
 
             <div class="btnrow">
-              <button class="btn btn-small" id="copyIban" type="button">Copia IBAN</button>
+              <button class="btn btn-small" id="copyIban" type="button" data-i18n="copyIban">Copia IBAN</button>
             </div>
 
             <div class="toast" id="toast" role="status" aria-live="polite"></div>
