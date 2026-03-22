@@ -67,6 +67,14 @@ a{
   letter-spacing:.2px;
 }
 
+.topbar-actions{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
 .menu{
   display:flex;
   align-items:center;
@@ -87,6 +95,35 @@ a{
   border-bottom-color:rgba(160,135,121,.5);
 }
 
+.lang-switch{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.lang-btn{
+  appearance:none;
+  border:none;
+  background:transparent;
+  padding:0;
+  margin:0;
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px;
+  color:var(--accent);
+  cursor:pointer;
+  opacity:.7;
+}
+
+.lang-btn.active{
+  opacity:1;
+  font-weight:600;
+}
+
+.lang-sep{
+  color:var(--accent);
+  opacity:.6;
+}
+
 .pages{
   min-height:calc(100vh - 74px);
 }
@@ -95,7 +132,7 @@ a{
 
 .page{
   display:none;
-  animation:fade .22s ease;
+  animation:fade .26s ease;
 }
 
 .page.is-active{
@@ -187,12 +224,13 @@ a{
   min-height:44px;
   font-size:16px;
   cursor:pointer;
-  transition:transform .08s ease, border-color .2s ease, background .2s ease;
+  transition:transform .14s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
 }
 
 .btn:hover{
   transform:translateY(-1px);
   border-color:rgba(160,135,121,.75);
+  box-shadow:0 8px 18px rgba(34,31,29,.08);
 }
 
 .btn.primary{
@@ -200,8 +238,6 @@ a{
   color:#fff;
   border-color:transparent;
 }
-
-/* NUOVO: pulsante piccolo (usato per Copia IBAN) */
 
 .btn.btn-small{
   padding:8px 14px;
@@ -270,6 +306,67 @@ a{
   color:var(--muted);
 }
 
+/* PROGRAMMA HOME */
+
+.program-card{
+  width:min(620px, 92vw);
+  margin:26px auto 0;
+  padding:18px 18px 16px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:rgba(255,255,255,.78);
+  box-shadow:var(--shadow);
+  text-align:left;
+}
+
+.program-card h2{
+  font-family:'Great Vibes',cursive;
+  font-weight:400;
+  font-size:42px;
+  line-height:1;
+  color:var(--accent);
+  text-align:center;
+  margin:4px 0 14px;
+}
+
+.program-item{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  padding:12px 4px;
+  border-top:1px solid rgba(34,31,29,.08);
+}
+
+.program-item:first-of-type{
+  border-top:none;
+}
+
+.program-time{
+  min-width:64px;
+  font-size:24px;
+  font-weight:600;
+  color:var(--accent);
+}
+
+.program-label{
+  font-size:22px;
+  font-weight:600;
+}
+
+.program-detail{
+  margin-top:2px;
+  color:var(--muted);
+}
+
+.program-note{
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid rgba(34,31,29,.08);
+  color:var(--muted);
+  text-align:center;
+  font-size:18px;
+}
+
 /* PAGINE INTERNE */
 
 .page-head{
@@ -293,6 +390,29 @@ a{
   font-size:18px;
 }
 
+.title-ornament{
+  width:76px;
+  height:1px;
+  background:rgba(160,135,121,.45);
+  margin:14px auto 0;
+  position:relative;
+}
+
+.title-ornament::before,
+.title-ornament::after{
+  content:"";
+  position:absolute;
+  top:-3px;
+  width:7px;
+  height:7px;
+  border:1px solid rgba(160,135,121,.45);
+  border-radius:50%;
+  background:#fff;
+}
+
+.title-ornament::before{ left:-2px; }
+.title-ornament::after{ right:-2px; }
+
 .content{
   max-width:900px;
   margin:0 auto;
@@ -302,7 +422,7 @@ a{
 .card{
   border:1px solid var(--line);
   border-radius:22px;
-  padding:18px 16px;
+  padding:22px 18px;
   background:linear-gradient(180deg, rgba(160,135,121,.08), rgba(160,135,121,.03));
   box-shadow:var(--shadow);
 }
@@ -326,7 +446,7 @@ a{
 
 .note{
   margin-top:16px;
-  padding:16px 16px;
+  padding:18px 18px;
   border:1px solid var(--line);
   border-radius:22px;
   background:#fff;
@@ -410,6 +530,11 @@ a{
     flex-direction:column;
   }
 
+  .topbar-actions{
+    flex-direction:column;
+    gap:10px;
+  }
+
   .brand{
     min-width:0;
   }
@@ -439,4 +564,16 @@ a{
     grid-template-columns:1fr;
   }
 
+  .program-item{
+    gap:12px;
+  }
+
+  .program-time{
+    min-width:58px;
+    font-size:22px;
+  }
+
+  .program-label{
+    font-size:20px;
+  }
 }
