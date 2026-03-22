@@ -11,7 +11,7 @@
 
 *{ box-sizing:border-box; }
 
-html,body{ height:100%; }
+html,body{ height:100%; scroll-behavior:smooth; }
 
 body{
   margin:0;
@@ -39,13 +39,13 @@ a{
 }
 
 .topbar-inner{
-  max-width:1050px;
+  max-width:1120px;
   margin:0 auto;
   padding:14px 16px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:14px;
+  gap:16px;
 }
 
 .brand{
@@ -70,7 +70,7 @@ a{
 .topbar-actions{
   display:flex;
   align-items:center;
-  gap:20px;
+  gap:18px;
   flex-wrap:wrap;
   justify-content:flex-end;
 }
@@ -98,30 +98,28 @@ a{
 .lang-switch{
   display:flex;
   align-items:center;
-  gap:6px;
+  gap:8px;
 }
 
-.lang-btn{
+.lang-pill{
   appearance:none;
-  border:none;
-  background:transparent;
-  padding:0;
-  margin:0;
+  border:1px solid rgba(160,135,121,.35);
+  background:#fff;
+  color:var(--accent);
+  border-radius:999px;
+  padding:6px 10px;
+  min-width:42px;
   font-family:'Cormorant Garamond',serif;
-  font-size:16px;
-  color:var(--accent);
-  cursor:pointer;
-  opacity:.7;
-}
-
-.lang-btn.active{
-  opacity:1;
+  font-size:15px;
   font-weight:600;
+  cursor:pointer;
+  transition:all .18s ease;
 }
 
-.lang-sep{
-  color:var(--accent);
-  opacity:.6;
+.lang-pill.active{
+  background:var(--accent);
+  color:#fff;
+  border-color:transparent;
 }
 
 .pages{
@@ -159,43 +157,52 @@ a{
 .hero-overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.86));
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.76), rgba(255,255,255,.88)),
+    radial-gradient(circle at center, rgba(255,255,255,.08), rgba(255,255,255,0));
 }
 
 .hero-content{
   position:relative;
-  width:min(920px, 92vw);
-  padding:52px 18px 40px;
+  width:min(980px, 92vw);
+  padding:64px 18px 56px;
   text-align:center;
+}
+
+.hero-stack{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
 }
 
 .names{
   font-family:'Great Vibes',cursive;
   font-weight:400;
-  font-size:76px;
+  font-size:82px;
   line-height:1.02;
   margin:0;
   color:var(--accent);
 }
 
 .subtitle{
-  margin:10px 0 0;
+  margin:0;
   color:var(--muted);
-  font-size:18px;
+  font-size:21px;
+  max-width:620px;
 }
 
 .datebox{
-  margin:18px auto 0;
   display:inline-block;
-  padding:14px 18px;
+  padding:16px 22px;
   border:1px solid var(--line);
-  border-radius:18px;
-  background:rgba(255,255,255,.75);
+  border-radius:20px;
+  background:rgba(255,255,255,.78);
   box-shadow:var(--shadow);
 }
 
 .date{
-  font-size:30px;
+  font-size:32px;
   letter-spacing:.6px;
   color:var(--accent);
 }
@@ -203,11 +210,10 @@ a{
 .time{
   margin-top:6px;
   color:var(--muted);
-  font-size:16px;
+  font-size:17px;
 }
 
 .cta-row{
-  margin-top:18px;
   display:flex;
   gap:10px;
   justify-content:center;
@@ -248,7 +254,6 @@ a{
 /* COUNTDOWN */
 
 .countdown{
-  margin:18px auto 0;
   display:flex;
   justify-content:center;
   gap:10px;
@@ -256,7 +261,7 @@ a{
 }
 
 .cd-item{
-  width:92px;
+  width:96px;
   border:1px solid var(--line);
   border-radius:16px;
   background:rgba(255,255,255,.75);
@@ -265,7 +270,7 @@ a{
 }
 
 .cd-num{
-  font-size:26px;
+  font-size:28px;
   font-weight:600;
   color:var(--accent);
 }
@@ -279,16 +284,16 @@ a{
 /* FOTO HOME */
 
 .photo-strip{
-  margin:26px auto 0;
+  margin:34px auto 0;
   display:flex;
   justify-content:center;
 }
 
 .photo-card{
-  width:min(520px, 92vw);
+  width:min(560px, 92vw);
   border:1px solid var(--line);
-  border-radius:22px;
-  background:rgba(255,255,255,.78);
+  border-radius:24px;
+  background:rgba(255,255,255,.8);
   box-shadow:var(--shadow);
   overflow:hidden;
   text-align:left;
@@ -296,25 +301,26 @@ a{
 
 .photo-card img{
   width:100%;
-  height:260px;
+  height:290px;
   object-fit:cover;
   display:block;
 }
 
 .photo-cap{
-  padding:12px 14px;
+  padding:14px 16px;
   color:var(--muted);
+  font-size:18px;
 }
 
 /* PROGRAMMA HOME */
 
 .program-card{
-  width:min(620px, 92vw);
-  margin:26px auto 0;
-  padding:18px 18px 16px;
+  width:min(680px, 94vw);
+  margin:34px auto 0;
+  padding:22px 22px 18px;
   border:1px solid var(--line);
-  border-radius:22px;
-  background:rgba(255,255,255,.78);
+  border-radius:24px;
+  background:rgba(255,255,255,.82);
   box-shadow:var(--shadow);
   text-align:left;
 }
@@ -322,18 +328,18 @@ a{
 .program-card h2{
   font-family:'Great Vibes',cursive;
   font-weight:400;
-  font-size:42px;
+  font-size:46px;
   line-height:1;
   color:var(--accent);
   text-align:center;
-  margin:4px 0 14px;
+  margin:4px 0 16px;
 }
 
 .program-item{
   display:flex;
   gap:16px;
   align-items:flex-start;
-  padding:12px 4px;
+  padding:14px 4px;
   border-top:1px solid rgba(34,31,29,.08);
 }
 
@@ -342,29 +348,32 @@ a{
 }
 
 .program-time{
-  min-width:64px;
+  min-width:72px;
   font-size:24px;
   font-weight:600;
-  color:var(--accent);
+  color:var(--ink);
 }
 
 .program-label{
-  font-size:22px;
+  font-size:23px;
   font-weight:600;
+  color:var(--ink);
 }
 
 .program-detail{
-  margin-top:2px;
+  margin-top:3px;
   color:var(--muted);
+  font-size:18px;
 }
 
 .program-note{
-  margin-top:12px;
-  padding-top:12px;
+  margin-top:14px;
+  padding-top:14px;
   border-top:1px solid rgba(34,31,29,.08);
-  color:var(--muted);
+  color:var(--ink);
   text-align:center;
-  font-size:18px;
+  font-size:19px;
+  font-weight:500;
 }
 
 /* PAGINE INTERNE */
@@ -524,19 +533,17 @@ a{
 
 /* MOBILE */
 
-@media (max-width:720px){
+@media (max-width:760px){
 
   .topbar-inner{
     flex-direction:column;
+    align-items:center;
   }
 
   .topbar-actions{
+    width:100%;
     flex-direction:column;
-    gap:10px;
-  }
-
-  .brand{
-    min-width:0;
+    gap:12px;
   }
 
   .menu{
@@ -544,20 +551,32 @@ a{
     gap:16px;
   }
 
+  .lang-switch{
+    justify-content:center;
+  }
+
+  .brand{
+    min-width:0;
+  }
+
   .names{
-    font-size:52px;
+    font-size:56px;
+  }
+
+  .subtitle{
+    font-size:19px;
+  }
+
+  .date{
+    font-size:27px;
+  }
+
+  .photo-card img{
+    height:230px;
   }
 
   .page-head h2{
     font-size:44px;
-  }
-
-  .date{
-    font-size:26px;
-  }
-
-  .photo-card img{
-    height:220px;
   }
 
   .iban-line{
@@ -569,11 +588,16 @@ a{
   }
 
   .program-time{
-    min-width:58px;
+    min-width:62px;
     font-size:22px;
   }
 
   .program-label{
     font-size:20px;
+  }
+
+  .program-detail,
+  .program-note{
+    font-size:17px;
   }
 }
