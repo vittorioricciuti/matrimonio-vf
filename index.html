@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -29,9 +29,8 @@
         </nav>
 
         <div class="lang-switch" aria-label="Language switcher">
-          <button class="lang-btn active" id="lang-it" type="button">IT</button>
-          <span class="lang-sep">|</span>
-          <button class="lang-btn" id="lang-en" type="button">EN</button>
+          <button class="lang-pill active" id="lang-it" type="button">IT</button>
+          <button class="lang-pill" id="lang-en" type="button">EN</button>
         </div>
       </div>
     </div>
@@ -45,31 +44,33 @@
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
-          <h1 class="names">Vittorio & Federica</h1>
-          <p class="subtitle" data-i18n="homeSubtitle">Sono felici di annunciare il loro matrimonio</p>
+          <div class="hero-stack">
+            <h1 class="names">Vittorio & Federica</h1>
+            <p class="subtitle" data-i18n="homeSubtitle">Sono felici di annunciare il loro matrimonio</p>
 
-          <div class="datebox">
-            <div class="date" data-i18n="homeDate">18 luglio 2026</div>
-            <div class="time" data-i18n="homeTime">ore 16:00</div>
-          </div>
-
-          <div class="cta-row">
-            <a class="btn primary" href="#rsvp" data-i18n="homeCtaRsvp">Conferma presenza</a>
-            <a class="btn" href="#cerimonia" data-i18n="homeCtaDetails">Dettagli</a>
-          </div>
-
-          <div class="countdown" aria-label="Countdown">
-            <div class="cd-item">
-              <div class="cd-num" id="cd-days">–</div>
-              <div class="cd-lab" data-i18n="countDays">giorni</div>
+            <div class="datebox">
+              <div class="date" data-i18n="homeDate">18 luglio 2026</div>
+              <div class="time" data-i18n="homeTime">ore 16:00</div>
             </div>
-            <div class="cd-item">
-              <div class="cd-num" id="cd-hours">–</div>
-              <div class="cd-lab" data-i18n="countHours">ore</div>
+
+            <div class="cta-row">
+              <a class="btn primary" href="#rsvp" data-i18n="homeCtaRsvp">Conferma presenza</a>
+              <a class="btn" href="#programma" data-i18n="homeCtaDetails">Dettagli</a>
             </div>
-            <div class="cd-item">
-              <div class="cd-num" id="cd-mins">–</div>
-              <div class="cd-lab" data-i18n="countMinutes">minuti</div>
+
+            <div class="countdown" aria-label="Countdown">
+              <div class="cd-item">
+                <div class="cd-num" id="cd-days">–</div>
+                <div class="cd-lab" data-i18n="countDays">giorni</div>
+              </div>
+              <div class="cd-item">
+                <div class="cd-num" id="cd-hours">–</div>
+                <div class="cd-lab" data-i18n="countHours">ore</div>
+              </div>
+              <div class="cd-item">
+                <div class="cd-num" id="cd-mins">–</div>
+                <div class="cd-lab" data-i18n="countMinutes">minuti</div>
+              </div>
             </div>
           </div>
 
@@ -80,7 +81,7 @@
             </div>
           </div>
 
-          <div class="program-card">
+          <div class="program-card" id="programma">
             <h2 data-i18n="programTitle">Programma</h2>
 
             <div class="program-item">
@@ -201,7 +202,7 @@
     <section class="page" id="rsvp" data-page="rsvp">
       <div class="page-head">
         <h2>RSVP</h2>
-        <p data-i18n="rsvpDeadline">È gradita conferma entro il <strong>1 giugno 2026</strong></p>
+        <p data-i18n-html="rsvpDeadline">È gradita conferma entro il <strong>1 giugno 2026</strong></p>
         <div class="title-ornament"></div>
       </div>
 
