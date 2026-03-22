@@ -187,6 +187,7 @@ a{
   line-height:1.02;
   margin:0;
   color:var(--accent);
+  text-shadow:0 3px 14px rgba(160,135,121,.18);
 }
 
 .subtitle{
@@ -238,9 +239,9 @@ a{
 }
 
 .btn:hover{
-  transform:translateY(-1px);
+  transform:translateY(-2px);
   border-color:rgba(160,135,121,.75);
-  box-shadow:0 8px 18px rgba(34,31,29,.08);
+  box-shadow:0 10px 22px rgba(34,31,29,.12);
 }
 
 .btn.primary{
@@ -308,6 +309,7 @@ a{
   height:290px;
   object-fit:cover;
   display:block;
+  filter:saturate(1.05) contrast(1.02);
 }
 
 .photo-cap{
@@ -321,12 +323,12 @@ a{
 
 .program-card{
   width:min(680px, 94vw);
-  margin:34px auto 0;
-  padding:22px 22px 18px;
+  margin:40px auto 0;
+  padding:26px 26px 22px;
   border:1px solid var(--line);
   border-radius:24px;
-  background:rgba(255,255,255,.82);
-  box-shadow:var(--shadow);
+  background:rgba(255,255,255,.88);
+  box-shadow:0 24px 48px rgba(34,31,29,.12);
   text-align:left;
 }
 
@@ -342,9 +344,9 @@ a{
 
 .program-item{
   display:flex;
-  gap:16px;
+  gap:18px;
   align-items:flex-start;
-  padding:14px 4px;
+  padding:16px 4px;
   border-top:1px solid rgba(34,31,29,.08);
 }
 
@@ -393,9 +395,10 @@ a{
 .page-head h2{
   font-family:'Great Vibes',cursive;
   font-weight:400;
-  font-size:56px;
+  font-size:58px;
   color:var(--accent);
   margin:0;
+  letter-spacing:.5px;
 }
 
 .page-head p{
