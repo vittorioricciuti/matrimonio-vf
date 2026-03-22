@@ -8,7 +8,6 @@ function showPage(pageName){
 function handleRoute(hash, options = { scroll: true }) {
   const raw = (hash || '#home').replace('#', '');
 
-  // ancora interna alla home
   if (raw === 'programma') {
     showPage('home');
     if (options.scroll) {
@@ -19,14 +18,12 @@ function handleRoute(hash, options = { scroll: true }) {
     return;
   }
 
-  // pagina normale
   if (pageIds.has(raw)) {
     showPage(raw);
     if (options.scroll) window.scrollTo({ top: 0, behavior: 'instant' });
     return;
   }
 
-  // fallback
   showPage('home');
   if (options.scroll) window.scrollTo({ top: 0, behavior: 'instant' });
 }
@@ -80,6 +77,7 @@ const translations = {
   it: {
     menuCerimonia: "Cerimonia",
     menuRicevimento: "Ricevimento",
+    menuAlloggi: "Alloggi",
     menuViaggio: "Viaggio di nozze",
 
     homeSubtitle: "Sono felici di annunciare il loro matrimonio",
@@ -121,6 +119,18 @@ const translations = {
     receptionParking: "Parcheggio disponibile direttamente presso la villa",
     mapVilla: "Apri la villa su Google Maps",
 
+    accommodationTitle: "Alloggi",
+    accommodationSubtitle: "Una soluzione convenzionata per chi desidera pernottare nei dintorni",
+    accommodationIntro: "Nelle vicinanze di Villa Boccabianca sono presenti diverse strutture ricettive. Per chi lo desiderasse, abbiamo tuttavia concordato una tariffa agevolata presso il seguente hotel:",
+    hotelLabel: "Hotel",
+    rateDoubleLabel: "Camera doppia / matrimoniale",
+    rateDoubleValue: "€80 a notte",
+    rateTripleLabel: "Camera tripla",
+    rateTripleValue: "€100 a notte",
+    hotelWebsiteButton: "Visita il sito dell’hotel",
+    accommodationBenefits: "La tariffa include la colazione e l’accesso gratuito alla spiaggia dello stabilimento balneare Minonda, situato proprio di fronte all’Hotel Timone.",
+    accommodationBooking: "Al momento della prenotazione vi chiediamo gentilmente di specificare che si tratta della tariffa convenzionata concordata in occasione del nostro matrimonio.",
+
     rsvpDeadline: "È gradita conferma entro il <strong>1 giugno 2026</strong>",
     rsvpTitle: "Conferma presenza",
     rsvpText: "Clicca sul pulsante qui sotto per compilare il modulo.",
@@ -139,6 +149,7 @@ const translations = {
   en: {
     menuCerimonia: "Ceremony",
     menuRicevimento: "Reception",
+    menuAlloggi: "Accommodation",
     menuViaggio: "Honeymoon",
 
     homeSubtitle: "Are delighted to announce their wedding",
@@ -179,6 +190,18 @@ const translations = {
     receptionDirections: "After the ceremony, the celebrations will continue at Villa Boccabianca. From the church, leave Piazza Peretti (Grottammare Alta) and head down towards the coast, joining the SS16 Adriatica road northbound towards Cupra Marittima / Ancona. Continue for about 4–5 km. After passing the town of Cupra Marittima, follow the signs for Contrada Bocca Bianca, 28.",
     receptionParking: "Parking is available directly at the villa",
     mapVilla: "Open villa in Google Maps",
+
+    accommodationTitle: "Accommodation",
+    accommodationSubtitle: "A special hotel rate for guests wishing to stay nearby",
+    accommodationIntro: "Several accommodation options are available near Villa Boccabianca. For those who wish, we have arranged a special rate at the following hotel:",
+    hotelLabel: "Hotel",
+    rateDoubleLabel: "Double room",
+    rateDoubleValue: "€80 per night",
+    rateTripleLabel: "Triple room",
+    rateTripleValue: "€100 per night",
+    hotelWebsiteButton: "Visit the hotel website",
+    accommodationBenefits: "The rate includes breakfast and free access to the beach of the Minonda beach club, located directly opposite Hotel Timone.",
+    accommodationBooking: "When booking, please specify that you would like to use the special rate arranged for our wedding.",
 
     rsvpDeadline: "Kindly confirm your attendance by <strong>June 1st, 2026</strong>",
     rsvpTitle: "RSVP",
